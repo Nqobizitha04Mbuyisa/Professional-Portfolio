@@ -13,7 +13,7 @@ export const profile = {
   githubHandle: "Nqobizitha04Mbuyisa",
   legacyPortfolio: "https://nqobizitha04mbuyisa.github.io/My-Portfolio/",
   avatarImage: "/Grad Image.jpeg",
-  resumeUrl: "/Nqobizitha_Mbuyisa_CV.pdf",
+  resumeUrl: "/Nqobizitha-Mbuyisa-CV.pdf",
   available: true,
 };
 
