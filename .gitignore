@@ -60,7 +60,7 @@ test_reports/
 .cache/
 .parcel-cache/
 
-# Emergent specific
+
 tests/
 test_result.md
 backend_test.py
