@@ -111,6 +111,4 @@ Computer Science & Information Technology Graduate
 
 Aspiring Java Software Engineer interested in backend development, full-stack applications, and building practical software solutions.
 
-LinkedIn: [LinkedIn](http://www.linkedin.com/in/nqobizitha-mbuyisa-660664250)
 
-GitHub: [GitHub](https://github.com/Nqobizitha04Mbuyisa)
