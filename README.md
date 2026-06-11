@@ -1,100 +1,116 @@
-# Nqobizitha Mbuyisa — Portfolio
+# Nqobizitha Mbuyisa Portfolio
 
-A modern, multi-page portfolio for **Nqobizitha Mbuyisa**, Junior Software Engineer specializing in Java backend development. Built with React + FastAPI + MongoDB, plus EmailJS for direct contact-form delivery.
+Personal portfolio website showcasing my background, technical skills, and software development projects.
 
-> http://future-fs-01-lilac.vercel.app/
+🔗 **Live Demo:** [My Portfolio](http://future-fs-01-lilac.vercel.app/)
 
----
+## About the Project
+
+I built this portfolio to create a central place where recruiters, employers, and other developers can learn more about me, view my projects, and get in touch with me.
+
+The website highlights my experience as a Computer Science and Information Technology graduate with a strong interest in Java software engineering, backend development, and full-stack application development.
 
 ## Features
 
-- **Multi-page** React app with React Router (Home, About, Skills, Projects, Experience, Contact)
-- **Interactive Skills page** that explains the *logic* behind every language used (Java, C#, Python, C++, SQL, JavaScript, HTML/CSS)
-- **Projects** with tag-filtering and case-study dialogs
-- **Contact form** that sends real emails via EmailJS *and* logs every submission to MongoDB as a backup
-- Fully **responsive** — mobile, tablet, desktop
-- Dark monochrome design with royal-blue accent
+* Multi-page React application
+* About Me section
+* Technical Skills overview
+* Project showcase with filtering
+* Experience and education information
+* Contact form for direct communication
+* Mobile-friendly and responsive design
 
----
+## Technologies Used
 
-## Tech Stack
- Frontend - React 19, React Router, Tailwind CSS, shadcn/ui, lucide-react 
- Backend - FastAPI, Pydantic v2, Motor (async Mongo) 
- Database - MongoDB (Atlas free tier) 
- Email - EmailJS (browser-based) 
- Hosting - Vercel (frontend) + Render (backend) + MongoDB Atlas 
+### Frontend
 
----
-
-## Project structure
-
-```
-
-frontend -> React app (deploy to Vercel)
-src -> components , pages , data/portfolioData , mock/mock.js and env.example
-backend -> server.py(FastAPIapp deployed to Render) , runtime.txt
-README.md
-
-
-### Prerequisites
-- Node 18+, Yarn
-- Python 3.11+
-- MongoDB running locally OR an Atlas connection string
+* React
+* React Router
+* Tailwind CSS
+* shadcn/ui
 
 ### Backend
+
+* FastAPI
+* Python
+* Pydantic
+
+### Database
+
+* MongoDB Atlas
+
+### Other Services
+
+* EmailJS
+* Render
+* Vercel
+
+## Project Structure
+
+```text
+frontend/
+├── src/
+├── components/
+├── pages/
+├── data/
+└── public/
+
+backend/
+├── server.py
+├── requirements.txt
+└── .env.example
+```
+
+## Running Locally
+
+### Backend
+
 ```bash
 cd backend
-cp .env.example .env
-# edit .env with your MONGO_URL and DB_NAME
 pip install -r requirements.txt
-uvicorn server:app --host 0.0.0.0 --port 8001 --reload
+uvicorn server:app --reload
 ```
 
 ### Frontend
+
 ```bash
 cd frontend
-cp .env.example .env
-# edit .env with your EmailJS keys and REACT_APP_BACKEND_URL=http://localhost:8001
-yarn install
-yarn start
+npm install
+npm start
 ```
 
-## Production deployment
+The application will be available at:
 
-### 1. MongoDB Atlas (free)
-1. Create or reuse an M0 cluster.
-2. Create a database user + add `0.0.0.0/0` to Network Access.
-3. Copy the connection string for `MONGO_URL`.
+```text
+http://localhost:3000
+```
 
-### 2. Backend → Render (free)
-1. New Web Service → connect this repo.
-2. **Root Directory:** `backend`
-3. **Build Command:** `pip install -r requirements.txt`
-4. **Start Command:** `uvicorn server:app --host 0.0.0.0 --port $PORT`
-5. Env vars: `MONGO_URL`, `DB_NAME`, `ALLOWED_ORIGINS=https://your-frontend.vercel.app`
+## What I Learned
 
-### 3. Frontend → Vercel (free)
-1. Import this repo.
-2. **Framework:** Create React App, **Root Directory:** `frontend`
-3. Env vars:
-   - `REACT_APP_BACKEND_URL=https://your-api.onrender.com`
-   - `REACT_APP_EMAILJS_SERVICE_ID=...`
-   - `REACT_APP_EMAILJS_TEMPLATE_ID=...`
-   - `REACT_APP_EMAILJS_PUBLIC_KEY=...`
-4. Deploy.
+Through this project I gained practical experience with:
 
-### 4. Lock down EmailJS
-emailjs.com → Account → Security → restrict by domain to your Vercel URL.
+* Building responsive user interfaces using React
+* Creating REST APIs with FastAPI
+* Working with MongoDB databases
+* Managing application deployment
+* Handling form submissions and email integration
+* Connecting frontend and backend applications
 
----
+## Future Improvements
 
-##  Contact API
+* Add a blog section
+* Improve project case studies
+* Add downloadable project documentation
+* Expand project filtering and search functionality
 
-| Method | Path | Purpose |
-|---|---|---|
-| `POST` | `/api/contact` | Store a contact submission (called by the frontend after EmailJS) |
-| `GET` | `/api/contact/messages?limit=50` | List recent submissions |
-| `GET` | `/api/contact/stats` | `{ total, last_24h, last_7d }` |
+## Author
 
+**Nqobizitha Mbuyisa**
 
-All content (CV, project descriptions, photos) © Nqobizitha Mbuyisa.
+Computer Science & Information Technology Graduate
+
+Aspiring Java Software Engineer interested in backend development, full-stack applications, and building practical software solutions.
+
+LinkedIn: [LinkedIn](http://www.linkedin.com/in/nqobizitha-mbuyisa-660664250)
+
+GitHub: [GitHub](https://github.com/Nqobizitha04Mbuyisa)
